@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+    </style>
+    <title>True</title>
 </head>
 <body>
-    <header>
-        {% load static %}
-        <img src="{% static 'img/logo.png' %}" alt="">
+    <header>        
+        <div class="logo">
+            {% load static %}
+            <img src="{% static 'img/logo.png' %}" alt="">
+        </div>
+        <div class="login">
+            <a href="#">
+                <button>Iniciar sesion</button>
+            </a>
+            <a href="#">
+                <button>Registrarse</button>
+            </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="#">Inicio</a></li>

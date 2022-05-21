@@ -1,0 +1,61 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body {
+    background-image: url(../img/fondo.jpg);
+}
+.login{
+    float: right; 
+    margin-top: -7%;
+}
+.login a:hover{
+    background-color: #BC4A4A;
+}
+.login a button{
+    font-family: 'Aclonica', sans-serif;
+    border: none;
+    background: #5B0606;
+    color: white;
+    border-radius: 4px;
+    padding: 4%;
+    margin-bottom: 3%;
+}
+.logo img{
+    width: 15%;
+    display: block;
+    margin: 0px auto;
+    padding: 1.5%;
+}
+nav {
+    display: block;
+    margin: 0px auto;
+    width: 38%;
+    text-decoration: none;
+    font-family: 'Aclonica', sans-serif;
+    background-color:#F2BA70;
+    text-align: center;    
+}
+nav ul{
+     list-style: none;
+     display: inline-block;
+     padding:2%;
+}
+nav ul li{
+      float: left;
+      margin-top: 1%;
+}
+nav ul li a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 18px;
+}
+nav ul li a:hover{
+    background-color: #5B0606;
+}
+nav ul li a:active {
+    background-color: #5B0606;
+  }
+
