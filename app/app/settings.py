@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #local apps
+    'home',
+    'users',
+    'statistic',
+    'game',
+    
 ]
 
 MIDDLEWARE = [
@@ -73,13 +79,13 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
-"""DATABASES = {
+}"""
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'truedatabase',
@@ -88,7 +94,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '',
     }
-}"""
+}
 
 
 # Password validation
