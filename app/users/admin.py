@@ -3,8 +3,8 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 #models
-from django.contrib.auth.models import User
-from users.models import User
+#from django.contrib.auth.models import User
+from users.models import UserProfile
 
 
 # Register your models here.
@@ -15,6 +15,6 @@ class UserAdmin(admin.ModelAdmin):
     readonly_fields = ('created', 'modified')
     
 
-admin.site.register(User, UserAdmin)
+admin.site.register(UserProfile, UserAdmin)
 
     
