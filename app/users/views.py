@@ -38,3 +38,7 @@ def user_registration(request):
             messages.warning(request, 'Your account expires in three days.')
         
     return render(request, 'registration/register.html', data)
+
+
+def user_profile(request):
+    return render(request, 'users/userprofile.html')
