@@ -2,7 +2,7 @@
 <form action="" method="POST">
     {% csrf_token %}
     {{ form }}
-    
+    <label for="l_box1"><input type="radio" name="display_type" value="locationbox" id="l_box1">Display Location</label>
     <input type="submit" value="Registrar">
 </form>
 
