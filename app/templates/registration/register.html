@@ -1,8 +1,12 @@
-<h2>register</h2>
-<form action="" method="POST">
-    {% csrf_token %}
-    {{ form }}
+{% extends 'header.html' %}
     
-    <input type="submit" value="Registrar">
-</form>
-
+    <h2>Registro</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        
+        <input type="submit" value="Registrar">
+    </form>
+    {% block 'contenido' %}
+    {% endblock 'contenido' %}
+    

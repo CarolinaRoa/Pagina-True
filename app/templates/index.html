@@ -11,28 +11,13 @@
     </style>
     <title>True</title>
 </head>
-<body>
-    <header>        
-        <div class="logo">
-            {% load static %}
-            <img src="{% static 'img/logo.png' %}" alt="">
-        </div>
-        <div class="login">
-            <form action="">
-                <input type="submit" value="Iniciar sesion">            
-            </form>
-            <form action="">
-                <input type="submit" value="Registrarse">
-            </form>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Mision y Vision</a></li>
-                <li><a href="#">Estadisticas</a></li>
-            </ul>
-        </nav>
-    </header>
+<body>    
+
+    {% block 'header' %}
+    
+    {% endblock 'header' %}
+
+    {% block 'contenido' %}
     <div class="banner">
         {% load static %}
         <img src="{% static 'img/banner.png' %}" alt="">
@@ -63,5 +48,6 @@
             <img src="{% static 'img/logo.png' %}" alt="">
         </div>        
     </footer>
+    {% endblock 'contenido' %}
 </body>
 </html>
