@@ -3,6 +3,7 @@ from .forms import CustomUserCreationForm
 from django.contrib.auth import authenticate, login
 from .models import UserProfile
 from django.contrib import messages
+from django.views.generic import TemplateView
 
 # Create your views here.
 """ Registro de usuarios """
@@ -40,5 +41,21 @@ def user_registration(request):
     return render(request, 'registration/register.html', data)
 
 
+"""class UserListView(TemplateView):
+    template_name = 'users/userprofile.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super(UserListView, self).get_context_data(**kwargs)
+        context.update(user=self.request.user)
+        return context"""
+    
+    
+
 def user_profile(request):
-    return render(request, 'users/userprofile.html')
+    queryset = UserProfile.objects.get(
+        user_name,
+        email
+    )
+    context = {'queryset':queryset}
+    return render(request, 'users/userprofile_list.html', context)
+
