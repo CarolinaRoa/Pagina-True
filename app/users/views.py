@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm
 from django.contrib.auth import authenticate, login
+from django.views.generic import ListView
 from .models import UserProfile
+
 
 # Create your views here.
 """ Registro de usuarios """
@@ -33,3 +35,20 @@ def user_registration(request):
         
         
     return render(request, 'registration/register.html', data)
+
+"""def user_detail(request):
+    
+    context = {
+        user_name: UserProfile.object.get(user_name)
+    }
+    
+    return render(request, 'users/user_detail.html', context)"""
+    
+    
+class UserDetailsView(ListView):
+    template_name = 'users/user_detail.html'
+    model = UserProfile
+    ordering = ('-created')
+    context_object_name = 'users'
+    
+    
