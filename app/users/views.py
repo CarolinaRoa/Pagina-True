@@ -17,10 +17,10 @@ def user_registration(request):
         if form.is_valid():
             form.save()
             user = authenticate(
-                username = form.cleaned_data["username"],
+                user_name = form.cleaned_data["user_name"],
                 password = form.cleaned_data["password"]
             )
-            login(request, user)
+            #login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             print("Sisas")
             
             
