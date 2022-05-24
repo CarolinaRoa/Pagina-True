@@ -1,0 +1,23 @@
+{% load static %}
+
+<header>
+    <div class="logo">
+        {% load static %}
+        <img src="{% static 'img/logo.png' %}" alt="">
+    </div>
+    <div class="login">
+        <form action="">
+            <input type="submit" value="Iniciar sesion">
+        </form>
+        <form action="{% url 'register' %}">
+            <input type="submit" value="Registrarse">
+        </form>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Mision y Vision</a></li>
+            <li><a href="#">Estadisticas</a></li>
+        </ul>
+    </nav>
+</header>

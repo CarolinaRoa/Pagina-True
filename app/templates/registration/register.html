@@ -1,8 +1,11 @@
-<h2>register</h2>
+{% extends 'index.html' %}
+
+{% block container %}
+<h2>Registro</h2>
 <form action="" method="POST">
     {% csrf_token %}
     {{ form }}
-    
+
     <input type="submit" value="Registrar">
 </form>
-
+{% endblock container %}
