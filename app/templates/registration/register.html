@@ -1,11 +1,37 @@
 {% extends 'index.html' %}
 
-{% block container %}
-<h2>Registro</h2>
-<form action="" method="POST">
-    {% csrf_token %}
-    {{ form }}
 
-    <input type="submit" value="Registrar">
-</form>
+{% block estilos-index %}
+    <link rel="stylesheet" href="../../static/css/register.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+    </style>
+{% endblock estilos-index %}
+
+{% block container %}
+<div class="registro">
+    <h2>Registro</h2>
+    <form action="">
+        <label for="">Nombres</label>
+        <input type="text"><br>
+        <label for="">Apellidos</label>
+        <input type="text"><br>
+        <label for="">Nombre de usuario</label>
+        <input type="text"><br>
+        <label for="">Contraseña</label>
+        <input type="password"><br>
+        <input type="submit" value="Registrar" class="boton">
+
+    </form>
+    <!--<form action="" method="POST">
+        <div class="">
+            {% csrf_token %}
+        </div>
+        <div class="input">
+            {{ form }}
+        </div>        
+        <input type="submit" value="Registrar">
+    </form>-->
+</div>
 {% endblock container %}

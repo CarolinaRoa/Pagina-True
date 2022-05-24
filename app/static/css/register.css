@@ -1,0 +1,101 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body {
+    width: 85%;
+    display: block;
+    margin: 0px auto;
+    background-image: url(../img/fondo.jpg);
+    
+}
+.login{
+    float: right; 
+    margin-top: -7%;
+}
+header form input{
+    font-family: 'Aclonica', sans-serif;
+    font-size: 20px;
+    border: none;
+    background: #5B0606;
+    color: white;
+    border-radius: 4px;
+    padding: 4%;
+    margin-bottom: 3%;
+}
+.logo img{
+    width: 15%;
+    display: block;
+    margin: 0px auto;
+    padding: 1.5%;
+}
+nav {
+    display: block;
+    margin: 0px auto;
+    width: 38%;
+    text-decoration: none;
+    font-family: 'Aclonica', sans-serif;
+    background-color:#F2BA70;
+    text-align: center;    
+}
+nav ul{
+     list-style: none;
+     display: inline-block;
+     padding:2%;
+}
+nav ul li{
+      float: left;
+      margin-top: 1%;
+}
+nav ul li a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 18px;
+}
+nav ul li a:hover{
+    background-color: #5B0606;
+}
+nav ul li a:active {
+    background-color: #5B0606;
+}
+
+.registro form{
+    color: black;
+    width: 30%;
+    font-family: 'Aclonica', sans-serif;
+    background-color: #9C6069;
+    display: block;
+    margin: 0px auto;
+    padding:2%;
+    border-radius: 20px;
+}
+.registro label {
+    width: 80%;
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding: 2%;  
+}
+.registro input{
+    width: 70%;
+    display: block;
+    margin: auto;
+    font-family: 'Aclonica', sans-serif;
+    font-size: 20px;
+    border: none;
+    background: white;
+    color: black;
+    border-radius: 4px;
+    padding: 3%;    
+}
+.registro .boton{
+    background-color: #5B0606;
+    color: white;
+}
+h2{
+    text-align: center;
+    font-family: 'Aclonica', sans-serif;
+    padding: 2%;
+}
