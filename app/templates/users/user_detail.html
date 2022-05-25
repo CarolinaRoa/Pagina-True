@@ -1,13 +1,20 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block header %}
+<div class="logo">
+    {% load static %}
+    <img src="{% static 'img/logo.png' %}" alt="">
+</div>
+
+<h2>{{ user.username }}</h2>
+<h2>{{ user.first_name }}</h2>
+
+<p>Aca van las estadisticas</p>
+
+{% endblock header %}
 
 
-{% for user in users %}
 
-    <ul>
-        <li>{{ user.user_name }}</li>
-        <li>{{ user.first_name }}</li>
-        <li>{{ user.email }}</li>
-    </ul>
 
-{% endfor %} 
 
 

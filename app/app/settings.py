@@ -29,8 +29,8 @@ ALLOWED_HOSTS = []
 
 #MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 
-LOGIN_REDIRECT_URL = '/' 
-LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'user' 
+LOGOUT_REDIRECT_URL = 'login'
 
 
 # Application definition
@@ -95,7 +95,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'truedatabase',
         'USER': 'postgres',
-        'PASSWORD': '99122701154',
+        'PASSWORD': 'postgres',
         'HOST': 'localhost',
         'PORT': '',
     }

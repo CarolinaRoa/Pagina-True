@@ -2,10 +2,26 @@
 
 {% block container %}
 <h2>Registro</h2>
+
+{% if messages %}
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+{% endif %}
+
 <form action="" method="POST">
     {% csrf_token %}
-    {{ form }}
+    {{ form.as_p }}
 
-    <input type="submit" value="Registrar">
+    <button type="submit" style="
+        background-color: #680f0f;
+        border: black;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 24px;
+      " >Registrase</button>
 </form>
 {% endblock container %}
