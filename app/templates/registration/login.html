@@ -9,9 +9,11 @@
     {% endfor %}
 {% endif %}
 
-<form action="" method="POST">
+<form action="{% url 'login' %}" method="POST">
     {% csrf_token %}
-    {{ form.as_p }}
+    <input type="text" placeholder="Username" name="username">
+    <input type="password" placeholder="Password" name="password">
+    
 
     <button type="submit" style="
     background-color: #680f0f;

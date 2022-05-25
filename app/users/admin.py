@@ -9,12 +9,5 @@ from users.models import UserProfile
 
 # Register your models here.
 
-class UserAdmin(admin.ModelAdmin):
-    """Profile admin"""
-    
-    readonly_fields = ('created', 'modified')
-    
-
-admin.site.register(UserProfile, UserAdmin)
 
     

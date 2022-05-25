@@ -1,3 +1,16 @@
-<h1>Xd</h1>
+{% extends 'index.html' %}
+
+{% block container %}
+
+    {{ user.username }}
+    {% if user == request.user %}
+        {{ user.first_name }}
+        {{ user.email }}
+    {% endif %}
+
+{% endblock container %}
+
+
+
 
 
