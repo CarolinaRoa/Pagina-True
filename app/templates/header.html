@@ -6,7 +6,7 @@
         <img src="{% static 'img/logo.png' %}" alt="">
     </div>
     <div class="login">
-        <form action="">
+        <form action="{% url 'login' %}">
             <input type="submit" value="Iniciar sesion">
         </form>
         <form action="{% url 'register' %}">
@@ -15,7 +15,7 @@
     </div>
     <nav>
         <ul>
-            <li><a href="#">Inicio</a></li>
+            <li><a href="{% url 'home' %}">Inicio</a></li>
             <li><a href="#">Mision y Vision</a></li>
             <li><a href="#">Estadisticas</a></li>
         </ul>

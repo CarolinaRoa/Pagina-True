@@ -1,8 +1,32 @@
+{% extends 'index.html' %}
 
+{% block container %}
 <h2>Login</h2>
+
+{% if messages %}
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+{% endif %}
+
 <form action="" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
 
-    <button type="submit">Ingresar</button>
+    <button type="submit" style="
+    background-color: #680f0f;
+    border: black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+  ">Ingresar</button>
 </form>
+{% endblock container %}
+
+
+
+
+
