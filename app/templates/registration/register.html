@@ -11,27 +11,19 @@
 
 {% block container %}
 <div class="registro">
-    <h2>Registro</h2>
-    <form action="">
-        <label for="">Nombres</label>
-        <input type="text"><br>
-        <label for="">Apellidos</label>
-        <input type="text"><br>
-        <label for="">Nombre de usuario</label>
-        <input type="text"><br>
-        <label for="">Contraseña</label>
-        <input type="password"><br>
-        <input type="submit" value="Registrar" class="boton">
+{% if messages %}
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+{% endif %}
 
+    <h2>Registro</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+    
+        <input type="submit" value="Registrar" class="boton">
     </form>
-    <!--<form action="" method="POST">
-        <div class="">
-            {% csrf_token %}
-        </div>
-        <div class="input">
-            {{ form }}
-        </div>        
-        <input type="submit" value="Registrar">
-    </form>-->
 </div>
+
 {% endblock container %}

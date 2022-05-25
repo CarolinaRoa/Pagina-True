@@ -1,13 +1,51 @@
+{% load static %}
+
+<header>
+    <div class="logo">
+        {% load static %}
+        <img src="{% static 'img/logo.png' %}" alt="">
+    </div>
+    <div class="login">
+        <h2 class="nombre">Usuario: {{ user.username }}</h2>
+        <input type="submit" value="Salir" style="
+            width: 70%;
+            display: block;
+            margin: auto;
+            font-family: 'Aclonica', sans-serif;
+            font-size: 20px;
+            border: none;
+            background: #5B0606;
+            color: white;
+            border-radius: 4px;
+            padding: 3%;">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Inicio</a></li>
+            <li><a href="#">Mision y Vision</a></li>
+            <li><a href="#">Estadisticas</a></li>
+        </ul>
+    </nav>
+</header>
+{% block header %}
+
+{% block estilos-index %}
+    <link rel="stylesheet" href="../../static/css/register.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+    </style>
+{% endblock estilos-index %}
+
+{% block container %}
+<h2> Bienvenido {{ user.first_name }}</h2>
+
+<p>Aca van las estadisticas</p>
+{% endblock container %}
+{% endblock header %}
 
 
-{% for user in users %}
 
-    <ul>
-        <li>{{ user.user_name }}</li>
-        <li>{{ user.first_name }}</li>
-        <li>{{ user.email }}</li>
-    </ul>
 
-{% endfor %} 
 
 
