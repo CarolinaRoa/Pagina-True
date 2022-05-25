@@ -2,10 +2,17 @@
 
 {% block container %}
 <h2>Registro</h2>
+
+{% if messages %}
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+{% endif %}
+
 <form action="" method="POST">
     {% csrf_token %}
-    {{ form }}
+    {{ form.as_p }}
 
-    <input type="submit" value="Registrar">
+    <button type="submit">Registrase</button>
 </form>
 {% endblock container %}
