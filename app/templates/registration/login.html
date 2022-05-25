@@ -1,7 +1,12 @@
-<h2>Login</h2>
-<form action="" method="POST">
+<form method="POST">
     {% csrf_token %}
-    {{ form }}
+    <input class="form-control" type="text" placeholder="Username" name="username">
     
-    <input type="submit" value="Ingresar">
+    
+    <input class="form-control" type="password" placeholder="Password" name="password">
+    
+
+    
+    <button class="btn btn-primary mt-5" type="submit">Sign in!</button>
+    
 </form>

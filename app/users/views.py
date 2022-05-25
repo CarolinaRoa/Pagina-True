@@ -51,4 +51,21 @@ class UserDetailsView(ListView):
     ordering = ('-created')
     context_object_name = 'users'
     
+def login_view(request):
+    """Login view."""
+    print("Bebecita prr")
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user:
+            print("Coronamo perros")
+            login(request, user)
+            return redirect('users/user_detail.html')
+        else:
+            print("pailas")
+            return render(request, 'users/login.html', {'error': 'Invalid username and password'})
+
+    return render(request, 'registration/login.html')
+    
     
