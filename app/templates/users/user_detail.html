@@ -1,14 +1,18 @@
 {% extends 'index.html' %}
+{% load static %}
+{% block header %}
+<div class="logo">
+    {% load static %}
+    <img src="{% static 'img/logo.png' %}" alt="">
+</div>
 
-{% block container %}
+<h2>{{ user.username }}</h2>
+<h2>{{ user.first_name }}</h2>
 
-    {{ user.username }}
-    {% if user == request.user %}
-        {{ user.first_name }}
-        {{ user.email }}
-    {% endif %}
+<p>Aca van las estadisticas</p>
 
-{% endblock container %}
+{% endblock header %}
+
 
 
 
